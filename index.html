@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>NearCut</title>
+    <meta name="description" content="">
+
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/countrySelect.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
+</head>
+<body>
+    <div class="app">
+        <div class="container">
+            <section class="hero section d-flex">
+                <div>
+                    <h2 class="title">The Completely Powerful Booking System for Barbers</h2>
+                    <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maecenas sed faucibus volutpat id eleifend quis elementum. </p>
+                    <a href="#" class="primary-link">Get started</a>
+                </div>
+                <div>
+                    <img src="images/visa.png" alt="Visa" class="hero-img" />
+                </div>
+            </section>
+            <section class="section d-flex section-primary">
+                <div>
+                    <form class="form">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Please enter your full name" />
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" placeholder="Please enter your email" />
+                        </div>
+                        <div class="form-group">
+                            <label>Form number</label>
+                            <input id="phone" name="phone" type="tel">
+                        </div>
+                        <div class="form-group">
+                            <label>Business Name</label>
+                            <input type="text" placeholder="Please enter your business name here" />
+                        </div>
+                        <div class="form-group">
+                            <label>Country</label>
+                            <div class="form-item">
+                                <input id="country_selector" type="text">
+                                <label for="country_selector" style="display:none;">Select a country here...</label>
+                            </div>
+                            <div class="form-item" style="display:none;">
+                                <input type="text" id="country_selector_code" name="country_selector_code" data-countrycodeinput="1" readonly="readonly" placeholder="Selected country code will appear here" />
+                                <label for="country_selector_code">...and the selected country code will be updated here</label>
+                            </div>
+                            <button type="submit" style="display:none;">Submit</button>
+                        </div>
+                        <div class="terms">
+                            <input type="checkbox" class="checkbox" />
+                            <span>I agree to all terms & conditions and policy features.</span>
+                        </div>
+                        <button class="primary-link">Create Your Account</button>
+                        <p>Already have a Nearcut account? <a href="#" class="form-link">Login Here</a></p>
+                    </form>
+                </div>
+                <div class="mobile-none">
+                    <h3 class="subtitle">Complete the registration <span>form to get started</span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maecenas sed faucibus volutpat id eleifend quis elementum. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maecenas sed faucibus volutpat id eleifend quis elementum. </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maecenas sed faucibus volutpat id eleifend quis elementum. </p>
+                </div>
+            </section>
+        </div>
+        <footer id="contact" class="footer">
+            <div class="container">
+                <img src="images/nearcut.png" alt="NearCut">
+                <p>So much more than a booking system</p>
+
+                <ul class="contact">
+                    <li><a href="tel:+441606277565" target="_blank"><img src="images/icon-phone.svg" alt="NearCut"/> <span>01 606 277 565</a></span></li>
+                    <li><a href="mailto:info@nearcut.com ?subject=Nearcut!" target="_blank"><img src="images/icon-email.svg" alt="NearCut"> <span>Email Us</span></a></li>
+                </ul>
+
+                <h3 class="subtitle">Social Media</h3>
+                <ul class="social-media">
+                    <li><a href="https://www.facebook.com/NearcutUK/" target="_blank"><img src="images/icon-facebook.svg" alt="Facebook" /></a></li>
+                    <li><a href="https://www.instagram.com/nearcutuk/" target="_blank"><img src="images/icon-instagram.svg" alt="Instagram" /></a></li>
+                    <li><a href="https://twitter.com/nearcut/" target="_blank"><img src="images/icon-twitter.svg" alt="Twitter" /></a></li>
+                    <li><a href="https://www.linkedin.com/company/nearcut" target="_blank"><img src="images/icon-linkedin.svg" alt="Linkedin" /></a></li>
+                </ul>
+                
+            </div>
+        </footer>
+    </div>
+</body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/countrySelect.js"></script>
+    <script src="js/intlTelInput.js"></script>
+    <script>
+        $("#country_selector").countrySelect({
+            // defaultCountry: "jp",
+            // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+            // responsiveDropdown: true,
+            preferredCountries: ['ca', 'gb', 'us']
+        });
+        var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      // allowDropdown: false,
+      // autoHideDialCode: false,
+      // autoPlaceholder: "off",
+      // dropdownContainer: document.body,
+      // excludeCountries: ["us"],
+      // formatOnDisplay: false,
+      // geoIpLookup: function(callback) {
+      //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+      //     var countryCode = (resp && resp.country) ? resp.country : "";
+      //     callback(countryCode);
+      //   });
+      // },
+      // hiddenInput: "full_number",
+      // initialCountry: "auto",
+      // localizedCountries: { 'de': 'Deutschland' },
+      // nationalMode: false,
+      // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      // placeholderNumberType: "MOBILE",
+      // preferredCountries: ['cn', 'jp'],
+      // separateDialCode: true,
+      utilsScript: "js/utils.js",
+    });
+    </script>
+</html>
